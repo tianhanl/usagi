@@ -2,6 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchArticles } from '../actions';
 import ArticleList from '../components/ArticleList';
+import styled from 'styled-components';
+
+const ArticleListViewContainer = styled.div`
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+`;
 
 class ArticleListView extends React.Component {
   componentDidMount() {
@@ -11,7 +19,11 @@ class ArticleListView extends React.Component {
 
   render() {
     const { items } = this.props.articles;
-    return <ArticleList articles={items} />;
+    return (
+      <ArticleListViewContainer>
+        <ArticleList articles={items} />
+      </ArticleListViewContainer>
+    );
   }
 }
 
