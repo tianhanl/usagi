@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchArticles } from '../actions';
 import ArticleList from '../components/ArticleList';
 import styled from 'styled-components';
+import LabelListContainer from '../containers/LabelListContainer';
 
 const ArticleListViewContainer = styled.div`
   position: relative;
@@ -21,6 +22,7 @@ class ArticleListView extends React.Component {
     const { items } = this.props.articles;
     return (
       <ArticleListViewContainer>
+        <LabelListContainer />
         <ArticleList articles={items} />
       </ArticleListViewContainer>
     );
