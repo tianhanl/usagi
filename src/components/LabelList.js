@@ -2,10 +2,14 @@ import React from 'react';
 import { PaddingLessUl } from './ShardStyledComponents';
 import Label from './Label';
 
+const LabelListContainer = PaddingLessUl.extend`
+  text-align: center;
+`;
+
 const LabelList = props => {
   const { labels, handleLabelClick } = props;
   return (
-    <PaddingLessUl>
+    <LabelListContainer>
       {labels.map(label => (
         <Label
           key={label.id}
@@ -13,7 +17,7 @@ const LabelList = props => {
           handleLabelClick={handleLabelClick}
         />
       ))}
-    </PaddingLessUl>
+    </LabelListContainer>
   );
 };
 

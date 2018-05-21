@@ -7,7 +7,7 @@ import {
 const initalState = {
   isLoading: false,
   items: [],
-  selectedItems: []
+  selectedItems: {}
 };
 
 const labels = (state = initalState, action) => {
@@ -15,26 +15,31 @@ const labels = (state = initalState, action) => {
     case `${FETCH_LABELS}_PENDING`:
       return { ...state, isLoading: true };
     case `${FETCH_LABELS}_FULFILLED`:
+      const selectedItems = {};
+      action.payload.forEach(element => {
+        selectedItems[element.id] = false;
+      });
       return {
         ...state,
         isLoading: false,
         items: action.payload,
-        selectedItems: action.payload
+        selectedItems: selectedItems
       };
     case SELECT_LABEL:
       return {
         ...state,
-        selectedItems: [
+        selectedItems: {
           ...state.selectedItems,
-          state.items.find(item => item.id === action.labelId)
-        ]
+          [action.labelId]: true
+        }
       };
     case DESELECT_LABEL:
       return {
         ...state,
-        selectedItems: state.selectedItems.filter(
-          item => item.id !== action.labelId
-        )
+        selectedItems: {
+          ...state.selectedItems,
+          [action.labelId]: false
+        }
       };
     default:
       return state;
