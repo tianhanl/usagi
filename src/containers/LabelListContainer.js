@@ -13,9 +13,9 @@ class LabelListContainer extends React.Component {
     const { selectedItems } = this.props.labels;
     const { selectLabel, deselectLabel } = this.props;
     if (selectedItems[id]) {
-      selectLabel(id);
-    } else {
       deselectLabel(id);
+    } else {
+      selectLabel(id);
     }
   };
 

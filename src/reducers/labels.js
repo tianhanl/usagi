@@ -17,7 +17,7 @@ const labels = (state = initalState, action) => {
     case `${FETCH_LABELS}_FULFILLED`:
       const selectedItems = {};
       action.payload.forEach(element => {
-        selectedItems[element.id] = false;
+        selectedItems[element.id] = true;
       });
       return {
         ...state,
