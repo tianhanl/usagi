@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from '../components/ShardStyledComponents';
+import { StyledLink } from '../components/ShardStyledComponents';
 
 const Wrapper = styled.footer`
   padding: 0.5rem;
@@ -11,7 +11,7 @@ const Wrapper = styled.footer`
 const Footer = props => {
   return (
     <Wrapper>
-      Created by <Link href="tianhang.me">TL</Link>
+      Created by <StyledLink href="tianhang.me">TL</StyledLink>
     </Wrapper>
   );
 };

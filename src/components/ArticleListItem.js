@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import dayjs from 'dayjs';
+import { StyledRouterLink } from './ShardStyledComponents';
 
 const ArticleListItemTime = styled.p`
   flex: 0 0 20%;
@@ -27,13 +28,15 @@ const ArticleListItemContainer = styled.li`
 `;
 
 const ArticleListItem = props => {
-  const { created_at: createdAt, title } = props.article;
+  const { created_at: createdAt, title, id } = props.article;
   return (
     <ArticleListItemContainer>
       <ArticleListItemTime>
         {dayjs(createdAt).format('MMM YYYY')}
       </ArticleListItemTime>
-      <ArticleListItemTitle>{title}</ArticleListItemTitle>
+      <ArticleListItemTitle>
+        {<StyledRouterLink to={`/${id}`}>{title}</StyledRouterLink>}
+      </ArticleListItemTitle>
     </ArticleListItemContainer>
   );
 };
