@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import configureStore from './configureStore';
 import Header from './components/Header';
 import ArticleListView from './views/ArticleListView';
-import styled from 'styled-components';
 import {
   FlexColumnWrapper,
   StickyMain
 } from './components/ShardStyledComponents';
+import Footer from './components/Footer';
 
 const store = configureStore();
 
@@ -30,6 +30,7 @@ class App extends Component {
           <StickyMain>
             <ArticleListView />
           </StickyMain>
+          <Footer />
         </Wrapper>
       </Provider>
     );

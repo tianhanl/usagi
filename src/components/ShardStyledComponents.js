@@ -15,3 +15,12 @@ export const FlexColumnWrapper = FlexWrapper.extend`
 export const StickyMain = styled.div`
   flex: 1 0 80%;
 `;
+
+export const Link = styled.a`
+  color: #f05967;
+  text-decoration: none;
+  transition: all 0.1s;
+  &:hover {
+    color: #f07883;
+  }
+`;
