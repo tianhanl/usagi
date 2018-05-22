@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 const LabelContainer = styled.li`
-  background: ${props => `#${props.color}`};
+  background: ${props => (props.isSelected ? `#${props.color}` : '#A8A8A8')};
   display: inline-block;
   color: HSLA(0, 0%, 32%, 1);
   padding: 0.25rem 0.5rem;
@@ -14,10 +14,14 @@ const LabelContainer = styled.li`
 `;
 
 const Label = props => {
-  const { handleLabelClick } = props;
+  const { handleLabelClick, isSelected } = props;
   const { color, name, id } = props.label;
   return (
-    <LabelContainer color={color} onClick={handleLabelClick(id)}>
+    <LabelContainer
+      isSelected={isSelected}
+      color={color}
+      onClick={handleLabelClick(id)}
+    >
       {name}
     </LabelContainer>
   );

@@ -7,13 +7,14 @@ const LabelListContainer = PaddingLessUl.extend`
 `;
 
 const LabelList = props => {
-  const { labels, handleLabelClick } = props;
+  const { labels, selectedLabels, handleLabelClick } = props;
   return (
     <LabelListContainer>
       {labels.map(label => (
         <Label
           key={label.id}
           label={label}
+          isSelected={selectedLabels[label.id]}
           handleLabelClick={handleLabelClick}
         />
       ))}

@@ -20,9 +20,13 @@ class LabelListContainer extends React.Component {
   };
 
   render() {
-    const { items } = this.props.labels;
+    const { items, selectedItems } = this.props.labels;
     return (
-      <LabelList labels={items} handleLabelClick={this.handleLabelClick} />
+      <LabelList
+        labels={items}
+        selectedLabels={selectedItems}
+        handleLabelClick={this.handleLabelClick}
+      />
     );
   }
 }
