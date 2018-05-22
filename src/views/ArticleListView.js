@@ -1,6 +1,4 @@
 import React from 'react';
-import { fetchArticles } from '../actions';
-import ArticleList from '../components/ArticleList';
 import styled from 'styled-components';
 import LabelListContainer from '../containers/LabelListContainer';
 import ArticleListContainer from '../containers/ArticleListContainer';
