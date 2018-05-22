@@ -37,6 +37,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.3.2",
     "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-promise-middleware": "^5.1.1",
@@ -59,8 +60,12 @@
     "babel-plugin-styled-components": "^1.5.1"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx,mjs}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
@@ -70,10 +75,11 @@
     "transform": {
       "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)":
-        "<rootDir>/config/jest/fileTransform.js"
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     },
@@ -88,8 +94,12 @@
     ]
   },
   "babel": {
-    "presets": ["react-app"],
-    "plugins": ["babel-plugin-styled-components"]
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "babel-plugin-styled-components"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"

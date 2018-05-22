@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import configureStore from './configureStore';
 import Header from './components/Header';
 import ArticleListView from './views/ArticleListView';
@@ -25,13 +26,17 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <Wrapper>
-          <Header blogTitle={'Usagi'} />
-          <StickyMain>
-            <ArticleListView />
-          </StickyMain>
-          <Footer />
-        </Wrapper>
+        <Router>
+          <Wrapper>
+            <Header blogTitle={'Usagi'} />
+            <StickyMain>
+              <Switch>
+                <Route path="/" component={ArticleListView} />
+              </Switch>
+            </StickyMain>
+            <Footer />
+          </Wrapper>
+        </Router>
       </Provider>
     );
   }
