@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { StyledRouterLink } from './ShardStyledComponents';
 
 const Title = styled.h1`
   font-size: 2.5rem;
@@ -16,7 +17,11 @@ const Header = props => {
   const { blogTitle } = props;
   return (
     <Wrapper>
-      <Title>{blogTitle}</Title>
+      <Title>
+        <StyledRouterLink style={{ color: '#515151' }} to={`/`}>
+          {blogTitle}
+        </StyledRouterLink>
+      </Title>
     </Wrapper>
   );
 };

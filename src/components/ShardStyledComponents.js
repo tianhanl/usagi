@@ -22,7 +22,7 @@ export const StyledLink = styled.a`
   text-decoration: none;
   transition: all 0.1s;
   &:hover {
-    color: #f07883;
+    opacity: 0.8;
   }
 `;
 
@@ -31,6 +31,6 @@ export const StyledRouterLink = styled(Link)`
   text-decoration: none;
   transition: all 0.1s;
   &:hover {
-    color: #f07883;
+    opacity: 0.8;
   }
 `;

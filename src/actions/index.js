@@ -20,3 +20,8 @@ export const deselectLabel = labelId => ({
   type: actions.DESELECT_LABEL,
   labelId
 });
+
+export const setActiveArticleId = articleId => ({
+  type: actions.SET_ACTIVE_ARTICLE_ID,
+  articleId
+});

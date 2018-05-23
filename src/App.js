@@ -9,6 +9,7 @@ import {
   StickyMain
 } from './components/ShardStyledComponents';
 import Footer from './components/Footer';
+import ArticleView from './views/ArticleView';
 
 const store = configureStore();
 
@@ -32,6 +33,7 @@ class App extends Component {
             <StickyMain>
               <Switch>
                 <Route exact path="/" component={ArticleListView} />
+                <Route path="/:id" component={ArticleView} />
               </Switch>
             </StickyMain>
             <Footer />

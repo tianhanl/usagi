@@ -11,6 +11,11 @@ const ArticleListViewContainer = styled.div`
 `;
 
 class ArticleListView extends React.Component {
+  componentDidMount() {
+    const blogName = 'usagi';
+    document.title = `${blogName} | Article List`;
+  }
+
   render() {
     return (
       <ArticleListViewContainer>
