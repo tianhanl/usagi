@@ -31,7 +31,7 @@ class App extends Component {
             <Header blogTitle={'Usagi'} />
             <StickyMain>
               <Switch>
-                <Route path="/" component={ArticleListView} />
+                <Route exact path="/" component={ArticleListView} />
               </Switch>
             </StickyMain>
             <Footer />
