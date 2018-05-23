@@ -18,9 +18,7 @@ const Header = props => {
   return (
     <Wrapper>
       <Title>
-        <StyledRouterLink style={{ color: '#515151' }} to={`/`}>
-          {blogTitle}
-        </StyledRouterLink>
+        <StyledRouterLink to={`/`}>{blogTitle}</StyledRouterLink>
       </Title>
     </Wrapper>
   );

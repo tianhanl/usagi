@@ -18,7 +18,8 @@ export const StickyMain = styled.div`
 `;
 
 export const StyledLink = styled.a`
-  color: #f05967;
+  font-weight: 300;
+  color: #515151;
   text-decoration: none;
   transition: all 0.1s;
   &:hover {
@@ -27,7 +28,8 @@ export const StyledLink = styled.a`
 `;
 
 export const StyledRouterLink = styled(Link)`
-  color: #f05967;
+  font-weight: 300;
+  color: #515151;
   text-decoration: none;
   transition: all 0.1s;
   &:hover {

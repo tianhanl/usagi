@@ -19,7 +19,6 @@ const ArticleListItemTitle = styled.h3`
 `;
 
 const ArticleListItemContainer = styled.li`
-  border-bottom: 1px solid #a9b6c5;
   display: block;
   padding: 1rem 0 1.5rem 0;
   margin-bottom: 1em;

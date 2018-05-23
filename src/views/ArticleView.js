@@ -6,7 +6,7 @@ import { setActiveArticleId } from '../actions';
 
 const Wrapper = styled.div`
   width: 80%;
-  max-width: 740px;
+  max-width: 600px;
   margin: auto;
   position: relative;
   padding: 0 1rem 1rem;
