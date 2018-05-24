@@ -1,9 +1,14 @@
 import actions from '../constants/actions';
-import { getArticles, getLabels } from '../utils/api';
+import { getArticles, getLabels, getArticle } from '../utils/api';
 
 export const fetchArticles = page => ({
   type: actions.FETCH_ARTICLES,
   payload: getArticles(page)
+});
+
+export const fetchArticle = id => ({
+  type: actions.FETCH_ARTICLE,
+  payload: getArticle(id)
 });
 
 export const fetchLabels = () => ({
@@ -19,9 +24,4 @@ export const selectLabel = labelId => ({
 export const deselectLabel = labelId => ({
   type: actions.DESELECT_LABEL,
   labelId
-});
-
-export const setActiveArticleId = articleId => ({
-  type: actions.SET_ACTIVE_ARTICLE_ID,
-  articleId
 });

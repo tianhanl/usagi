@@ -16,4 +16,4 @@ const currentArticle = (state = initalState, action) => {
   }
 };
 
-export default activeArticleId;
+export default currentArticle;

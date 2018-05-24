@@ -27,14 +27,14 @@ const ArticleListItemContainer = styled.li`
 `;
 
 const ArticleListItem = props => {
-  const { created_at: createdAt, title, id } = props.article;
+  const { created_at: createdAt, title, number } = props.article;
   return (
     <ArticleListItemContainer>
       <ArticleListItemTime>
         {dayjs(createdAt).format('MMM YYYY')}
       </ArticleListItemTime>
       <ArticleListItemTitle>
-        {<StyledRouterLink to={`/${id}`}>{title}</StyledRouterLink>}
+        {<StyledRouterLink to={`/${number}`}>{title}</StyledRouterLink>}
       </ArticleListItemTitle>
     </ArticleListItemContainer>
   );

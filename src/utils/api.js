@@ -8,6 +8,12 @@ export const getArticles = page => {
   ).then(response => response.json());
 };
 
+export const getArticle = id => {
+  return fetch(
+    `${apiEndpoint}/repos/${username}/${reponame}/issues/${id}`
+  ).then(response => response.json());
+};
+
 export const getLabels = () => {
   return fetch(`${apiEndpoint}/repos/${username}/${reponame}/labels`).then(
     response => response.json()
