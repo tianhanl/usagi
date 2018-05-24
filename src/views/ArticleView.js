@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import ArticleContent from '../components/ArticleContent';
 import { fetchArticle } from '../actions';
+import LoadingIndicator from '../components/LoadingIndicator';
 
 const Wrapper = styled.div`
   width: 80%;
@@ -24,7 +25,11 @@ class ArticleView extends React.Component {
     const { currentArticle } = this.props;
     return (
       <Wrapper>
-        <ArticleContent article={currentArticle.item} />
+        {currentArticle.isLoading ? (
+          <LoadingIndicator />
+        ) : (
+          <ArticleContent article={currentArticle.item} />
+        )}
       </Wrapper>
     );
   }
