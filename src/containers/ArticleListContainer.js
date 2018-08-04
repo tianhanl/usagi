@@ -6,8 +6,8 @@ import LoadingIndicator from '../components/LoadingIndicator';
 
 class ArticleListContainer extends React.Component {
   componentDidMount() {
-    const { fetchArticles } = this.props;
-    fetchArticles(1);
+    const { fetchArticles, articles } = this.props;
+    if (!articles.items || !articles.items.length) fetchArticles(1);
   }
 
   render() {
@@ -28,6 +28,7 @@ const mapDispatchToProps = dispatch => ({
   fetchArticles: page => dispatch(fetchArticles(page))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  ArticleListContainer
-);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ArticleListContainer);
